@@ -33,13 +33,13 @@
         });
 
         // every time ajax is called
-        $(loadingElement).bind("ajaxSend", function() {
+        $(document).ajaxSend(function () {
             $(loadingElement).show();
         })
 
         // every time ajax is completed
-        $(loadingElement).bind("ajaxComplete", function() {
-            self.setTimeout(function(){
+        $(document).ajaxComplete(function () {
+            self.setTimeout(function (){
                 $(loadingElement).hide();
             }, 4000);
         });
